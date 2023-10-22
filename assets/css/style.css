@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+/* Khôi phục lại cở chữ cho việc quy đổi 1.6rem = 16px = mặc định trình duyệt */
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+}
+/* ======PHAN DUNG CHUNG USE COMON====== */
+a {
+  text-decoration: none;
+}
+.btn {
+  line-height: 40px;
+  min-width: 118px;
+  display: inline-block; /*set inline block để use padding*/
+  padding: 0px 16px;
+  color: #fff;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-radius: 24.5px;
+  background: #171100;
+}
+.main-content {
+  width: 1170px;
+  /* Muoon do rong 2 ben laf 24px thi */
+  max-width: calc(100% - 48px);
+  /* canh trai, phai */
+  margin-right: auto;
+  margin-left: auto;
+}
+/* ======header====== */
+.header {
+  background: #dfc2c2;
+}
+.header.fixed {
+  position: sticky;
+  top: -28px;
+}
+.header .body {
+  display: flex;
+  align-items: center;
+  padding: 36px 0px 8px;
+}
+
+.nav {
+  margin-left: auto;
+}
+.nav ul {
+  display: flex;
+}
+.nav a {
+  position: relative;
+  color: #5f5b53;
+  font-size: 1.6rem;
+  font-weight: 400;
+  /* background-color: red; */
+  padding: 8px 2.62rem;
+  /* margin: 8px 21px; */
+}
+/* .nav li.active a:hover, */
+.nav a:hover {
+  color: #420633;
+  /* font-weight: 600; */
+  text-shadow: 1px 0 0 currentColor;
+}
+.nav li.active a::after {
+  position: absolute;
+  left: 25px;
+  bottom: 6px;
+  display: block;
+  content: "";
+  width: 12px;
+  height: 2px;
+  border-radius: 1px;
+  background: #041103;
+}
+.header .btn-sign-up {
+  min-width: 144px;
+}
+.header .action {
+  margin-left: 49px;
+}
