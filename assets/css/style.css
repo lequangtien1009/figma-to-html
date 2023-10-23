@@ -9,7 +9,11 @@ body {
   font-size: 1.6rem;
   font-family: "Poppins", sans-serif;
 }
-/* ======PHAN DUNG CHUNG USE COMON====== */
+/* --- đặt màu nền --- */
+:root {
+  --mau-nen: #ffecc7;
+}
+/* ======PHAN DUNG CHUNG USE COmMON ====== */
 a {
   text-decoration: none;
 }
@@ -27,7 +31,7 @@ a {
 }
 .main-content {
   width: 1170px;
-  /* Muoon do rong 2 ben laf 24px thi */
+  /* mo do rong 2 ben laf 24px thi */
   max-width: calc(100% - 48px);
   /* canh trai, phai */
   margin-right: auto;
@@ -35,7 +39,7 @@ a {
 }
 /* ======header====== */
 .header {
-  background: #dfc2c2;
+  background: var(--mau-nen);
 }
 .header.fixed {
   position: sticky;
@@ -84,4 +88,73 @@ a {
 }
 .header .action {
   margin-left: 49px;
+}
+/* ===== phan hero ======= */
+.hero {
+  /* margin-top: 56px; vì margin ko đổ được màu nên xài padding */
+  padding: 56px;
+  background-color: var(--mau-nen);
+}
+.hero .body {
+}
+.hero .media-block {
+  /* đặt thẻ cha, để hero-sumary quan hệ */
+  position: relative;
+  width: 52%;
+}
+
+.hero .content-block {
+  width: 48%;
+}
+/* Đóng khung ảnh - 470x685 */
+.hero .media-block .img {
+  width: 470px;
+  height: 685px;
+  /* co ảnh => ko vỡ giao diện */
+  object-fit: cover;
+  border-radius: 1.5rem;
+}
+.hero .hero-summary {
+  width: 270px;
+  padding: 20px;
+  position: absolute;
+  bottom: 90px;
+  right: -10px;
+  border-radius: 0.75rem;
+  background: #fff;
+  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+}
+.hero-summary .item {
+  display: flex;
+}
+.hero-summary .icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-summary .icon1 {
+  background-color: #fff9e8;
+}
+.hero-summary .icon2 {
+  background-color: #fcefff;
+}
+.hero-summary .icon3 {
+  background-color: #ebeaff;
+}
+.hero-summary .info {
+  margin-left: 16px;
+}
+.hero-summary .label {
+  color: #5f5b53;
+  font-size: 1.4rem;
+  line-height: 1.86;
+}
+.hero-summary .title {
+  color: #171100;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.67; /* 166.667% */
 }
