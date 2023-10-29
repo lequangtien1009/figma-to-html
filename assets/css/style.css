@@ -19,6 +19,16 @@ body {
 a {
   text-decoration: none;
 }
+
+.heading-lv2 {
+  color: #171100;
+  font-family: var(--font-heading);
+  font-size: 3.8rem;
+  font-weight: 700;
+  line-height: 1.27; /* 126.316% */
+  letter-spacing: -0.76px;
+}
+
 .btn {
   line-height: 40px;
   min-width: 118px;
@@ -234,7 +244,7 @@ a {
 .hero .desc-recent {
   margin-top: 48px;
 }
-.hero .stats{
+.hero .stats {
   margin-top: 18px;
 }
 .hero .stats strong {
@@ -245,6 +255,66 @@ a {
   font-weight: 700;
   line-height: 1.23rem; /* 122.727% */
 }
-.hero .stats strong:nth-child(2){
+.hero .stats strong:nth-child(2) {
   margin-left: 28px;
+}
+/* ========popular========= */
+.popular {
+  margin-top: 135px;
+  padding: 65px 0px;
+  /* background-color: yellowgreen; */
+}
+.popular-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popular-top .controls {
+  display: flex;
+  gap: 18px;
+}
+
+.popular-top .desc {
+  margin-top: 16px;
+  width: 458px;
+  color: #5f5b53;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.67; /* 166.667% */
+}
+.popular-top .control-btn {
+  background: transparent; /*đổ nền trong suốt*/
+
+  display: flex; /*đổ nền trong suốt*/
+  justify-content: center; /*đổ nền trong suốt*/
+  align-items: center; /* Phải cho thằng cha nó ở display-flex*/
+
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--mau-nen-so2);
+  color: var(--mau-nen-so2);
+}
+.popular-top .control-btn:hover {
+  background: var(--mau-nen-so2);
+  color: white;
+  cursor: pointer;
+}
+/* =========== */
+.popular .course-list {
+  margin-top: 55px;
+  display: flex;
+  gap: 30px;
+}
+.popular .course-list .thumb {
+  width: 100%;
+  border-radius: 0.75rem 0.75rem 0rem 0rem;
+  height: 278px;
+  object-fit: cover;
+}
+.popular .course-item {
+  border-radius: 0.75rem;
+  border: 1px solid #e2dfda;
+  background: #fff;
 }
