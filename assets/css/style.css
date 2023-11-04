@@ -14,7 +14,7 @@ body {
   --mau-nen: #ffecc7;
   --font-heading: "Sen", sans-serif;
   --mau-nen-so2: #ffb900;
-  /* --line-clamp:; */
+  /* --shadow: 0.1; */
 }
 /* ======PHAN DUNG CHUNG USE COmMON ====== */
 a {
@@ -341,7 +341,7 @@ chu co do dai ky tu > do rong cua item => vo giao dien */
   border: 1px solid transparent;
   border-radius: 0.75rem;
   background: #fff;
-  box-shadow: 0px 18px 36px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 18px 36px 0px rgba(0, 0, 0, 0.09);
 }
 
 .popular .course-item .info {
@@ -526,3 +526,107 @@ chu co do dai ky tu > do rong cua item => vo giao dien */
   object-fit: cover;
 }
 /* Cach 2: co the dung the cha => dao nguoc = row-reve */
+/* =========== BLOGS ============== */
+.blogs {
+  margin-top: 135px;
+  padding: 96px 0;
+  background: #fffcf4;
+  /* background: yellow; */
+}
+.blog-top {
+  text-align: center;
+}
+.blog-top .desc {
+  margin: 16px auto 0; /* cho text canh giua */
+  color: #696262;
+  text-align: center;
+  width: 448px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.75; /* 175% */
+}
+.blog-list {
+  margin-top: 55px;
+  display: flex;
+  gap: 30px;
+  overflow: hidden;
+}
+.blogs .item {
+  /* width: 33.33%; */
+  width: calc(33.33% - 20px);
+
+  background: #ffffff;
+  /* ko cho co lai */
+  flex-shrink: 0;
+}
+.blogs .item:hover {
+  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.09);
+}
+
+.blogs .item .thumb {
+  width: 100%;
+  border-radius: 1rem 1rem 0rem 0rem;
+}
+.blogs .info {
+  padding: 20px 20px 28px;
+}
+.blogs .item .date {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  color: #5f5b53;
+  font-size: 1.4rem;
+  line-height: 1.86; /* 185.714% */
+}
+.blogs .item .date::before {
+  display: inline-block;
+  margin-right: 4px;
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: var(--mau-nen-so2);
+  border-radius: 50%;
+}
+.blogs .item .date::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: -27px;
+
+  display: inline-block;
+  content: "";
+  height: 1px;
+  border-radius: 0.5px;
+  background: #e2dfda;
+}
+.blogs .info .title {
+  margin-top: 12px;
+  color: #171100;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.75; /* 175% */
+}
+.blogs .info .btn {
+  margin-top: 12px;
+  font-size: 1.4rem;
+}
+.blogs .info .btn:hover {
+  background: var(--mau-nen-so2);
+}
+.blogs .dots {
+  margin-top: 38px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.blogs .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #5f5b53;
+  cursor: pointer;
+}
+.blogs .dot.active {
+  background: var(--mau-nen-so2);
+  cursor: default;
+}
