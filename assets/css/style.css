@@ -394,12 +394,22 @@ chu co do dai ky tu > do rong cua item => vo giao dien */
 }
 /* ====== FEEDBACK========= */
 .feedback {
-  margin-top: 12.5rem; /*135px */
+  margin-top: 135px; /*135px */
   padding: 96px 0;
   background: #2e2100;
 }
+
+/* Tao cho nhieu  */
+.feedback-list {
+  display: flex;
+  overflow: hidden;
+}
+
 .feedback-item {
   display: flex;
+  width: 100%;
+  /* cho 3 danh sach fb rong ra */
+  flex-shrink: 0;
 }
 .feedback-item .avatar {
   width: 4.5rem;
@@ -445,9 +455,10 @@ chu co do dai ky tu > do rong cua item => vo giao dien */
   margin-left: auto;
 }
 .feedback-item blockquote {
+  /* margin-left: 15rem; */
+  /* margin-right: 8rem; */
   color: #fff;
   font-size: 2.625rem;
   font-style: italic;
-  font-weight: 400;
   line-height: 1.6; /* 153.846% */
 }
