@@ -14,6 +14,7 @@ body {
   --mau-nen: #ffecc7;
   --font-heading: "Sen", sans-serif;
   --mau-nen-so2: #ffb900;
+  /* --line-clamp:; */
 }
 /* ======PHAN DUNG CHUNG USE COmMON ====== */
 a {
@@ -53,6 +54,23 @@ a {
   margin-right: auto;
   margin-left: auto;
 }
+/* Tạo giói hạn văn bản */
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+/* Tao class moi de gioi han van ban => khi qua 2 dong */
+.line-clamp.line-2 {
+  --line-clamp: 2
+}
+/* Tranh truong hop vo giao dien khi nguoi dung chenlink, hoac
+chu co do dai ky tu > do rong cua item => vo giao dien */
+.break-all{
+  word-break: break-all;
+}
+
 /* ======header====== */
 .header {
   background: var(--mau-nen);
@@ -314,6 +332,7 @@ a {
   object-fit: cover;
 }
 .popular .course-item {
+  flex: 1; /* cho 3 cột ko bị co giãn theo chiều rộng => bể giao diện */
   border-radius: 0.75rem;
   border: 1px solid #e2dfda;
   background: #fff;
